@@ -8,31 +8,28 @@
 
     <title>search-highlight lib</title>
 
-    <link href="../themes/blackboard.css" rel="stylesheet" type="text/css" media="screen">
-
-
-    <script src="components/rainbow/js/rainbow.min.js"></script>
-    <script src="components/rainbow/js/language/javascript.js"></script>
-
+    <link href="components/rainbow/themes/github.css" rel="stylesheet" type="text/css" media="screen">
   </head>
   <body>
     <pre>
-      <code data-language="javascript">
-        var rpp = require('random-polish-proverb');
+      <code data-language="javascript">var rpp = require('random-polish-proverb');
 
-        var getFirst = function(first) {
-          if (~first.indexOf(', ') && ~~(Math.random()*3) > 0) {
-            return first.split(', ')[0];
-          } else if (~first.indexOf('; ')) {
-            return first.split('; ')[0];
-          } else {
-            var splitted = first.split(' ');
-            var wordsCount = Math.round(splitted.length/2) + (1-~~(Math.random()*3));
-            var words = splitted.slice(0, wordsCount);
-            return words.join(' ');
-          }
-        };
-      </code>
+      var getFirst = function(first) {
+        if (~first.indexOf(', ') && ~~(Math.random()*3) > 0) {
+          return first.split(', ')[0];
+        } else if (~first.indexOf('; ')) {
+          return first.split('; ')[0];
+        } else {
+          var splitted = first.split(' ');
+          var wordsCount = Math.round(splitted.length/2) + (1-~~(Math.random()*3));
+          var words = splitted.slice(0, wordsCount);
+          return words.join(' ');
+        }
+      };</code>
     </pre>
+
+    <script src="components/rainbow/js/rainbow.min.js"></script>
+    <script src="components/rainbow/js/language/generic.js"></script>
+    <script src="components/rainbow/js/language/javascript.js"></script>
   </body>
 </html>
