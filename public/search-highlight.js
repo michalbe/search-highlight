@@ -7,4 +7,7 @@ var SH = function(node, word) {
   });
 };
 
-SH(document.getElementsByTagName('pre')[0], 'first');
+
+setTimeout(function() {
+  SH(document.getElementsByTagName('pre')[0], 'first');
+}, 500);
