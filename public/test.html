@@ -37,6 +37,12 @@
       };</code>
     </pre>
 
+    <input type="text" id="sf"></input><button id="btn">SEARCH</button>
+    <script>
+      document.getElementById('btn').addEventListener('click', function() {
+        SH(document.getElementsByTagName('pre')[0], document.getElementById('sf').value);
+      });
+    </script>
     <script src="components/rainbow/js/rainbow.js"></script>
     <script src="components/rainbow/js/language/generic.js"></script>
     <script src="components/rainbow/js/language/javascript.js"></script>
