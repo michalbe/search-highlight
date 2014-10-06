@@ -1,5 +1,5 @@
 var SH = function(node, phrase) {
-  phrase = phrase.replace(/([^A-Za-z0-9\- ]+)/g, ' ');
+  phrase = phrase.replace(/([^A-Za-z0-9\- ]+)/g, ' ').trim();
   phrase = phrase.split(' ');
   setTimeout(function() {
     phrase.forEach(function(word) {
