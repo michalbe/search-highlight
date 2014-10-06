@@ -6,7 +6,7 @@ var SH = function(node, phrase) {
       console.log('elo', word);
       mainNode = Array.prototype.slice.call(node.children);
       mainNode.forEach(function(node) {
-        var content = node.innerHTML;
+        var content = node.textContent;
         content = content.replace(new RegExp(word, 'gi'), '<span class="sh-search">' + word + '</span>');
         node.innerHTML = content;
       });
