@@ -7,8 +7,10 @@ var SH = function(node, phrase) {
       mainNode = Array.prototype.slice.call(node.children);
       mainNode.forEach(function(node) {
         var content = node.textContent;
-        content = content.replace(new RegExp(word, 'gi'), '<span class="sh-search">' + word + '</span>');
-        node.innerHTML = content;
+        if (content.indexOf(word)) {
+          content = content.replace(new RegExp(word, 'gi'), '<span class="sh-search">' + word + '</span>');
+          node.innerHTML = content;
+        }
       });
     });
   }, 500);
